@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>兔兔的博客</title>
+  <title>兔兔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="兔兔的博客">
+<meta property="og:title" content="兔兔">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="兔兔的博客">
+<meta property="og:site_name" content="兔兔">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="兔兔的博客">
+<meta name="twitter:title" content="兔兔">
   
-    <link rel="alternative" href="/atom.xml" title="兔兔的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="兔兔" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -54,7 +54,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -65,11 +65,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -83,6 +79,10 @@
 					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
+		        
+					<a class="weixin" target="_blank" href="#" title="weixin"><i class="icon-weixin"></i></a>
 		        
 			</div>
 		</nav>
@@ -125,6 +125,10 @@
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
+						<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
+			        
+						<a class="weixin" target="_blank" href="#" title="weixin"><i class="icon-weixin"></i></a>
+			        
 				</div>
 			</nav>
 
@@ -134,7 +138,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -150,6 +154,68 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-对backbone的一些理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/10/对backbone的一些理解/">对backbone的一些理解</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/10/对backbone的一些理解/" class="archive-article-date">
+  	<time datetime="2017-03-10T01:18:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在公司实习中，开发了联合书社的crm系统。用到了backboneJs的框架。在开发中，有一些自己的理解。</p>
+<h2 id="backbone一些需要注意的地方"><a href="#backbone一些需要注意的地方" class="headerlink" title="backbone一些需要注意的地方"></a>backbone一些需要注意的地方</h2><ul>
+<li>model的save方法：若值有修改，则会重置之前的值，若出现了新的字段，则增加新的字段和值。</li>
+<li>在进行多页面操作时，可以利用router对不同页面进行渲染和取数据。</li>
+<li>最后一定要写上<code>Backbone.history.start()</code>。</li>
+<li>模板中的数据是要<code>.toJSON()</code>后才能放进模板里。</li>
+<li>合并json需要用<code>$.extend({},,)</code>。</li>
+<li>默认view的<code>render()</code>是不执行的。</li>
+<li>js新建前几天的时间时候只能用getTime()减去相应毫秒。</li>
+<li>拿回来的数据中，是collection的就要在collection中return回去，其他需要用到的数据应当<code>this.*=data.*</code>。</li>
+<li>url和urlRoot区别：urlRoot是给model用的根目录。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/10/对backbone的一些理解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-article-title" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -308,11 +374,7 @@
       
     
       
-      
-      
     
-      
-      
       
     
     
@@ -321,15 +383,11 @@
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 100%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -393,45 +451,7 @@
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
-  	  	
-    	</section>
     
   </div>
   
